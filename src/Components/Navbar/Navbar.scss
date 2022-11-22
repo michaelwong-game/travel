@@ -23,7 +23,6 @@
         transform: translateY(5px);
     }
 
-
     @media screen and (max-width: 550px) {
         .navBar {
             position: absolute;
@@ -31,47 +30,51 @@
             height: max-content;
             width: 80%;
             border-radius: 1rem;
-            top: 6rem;
+            top: -30rem;
             left: 50%;
             padding: 1rem;
             transform: translateX(-50%);
             z-index: 2000;
             box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
-            transition: 0.3s ease-in-out;
-        }
+            transition: 0.5s ease-in-out;
 
-        .navList {
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            margin: auto;
-            padding: 0.5rem 0;
-
-            .navItem {
+            .navList {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
                 padding: 0.5rem 0;
-                .navLink {
-                    color: var(--textColor);
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    &:hover {
-                        color: var(--PrimaryColor);
+
+                .navItem {
+                    padding: 0.5rem 0;
+                    .navLink {
+                        color: var(--textColor);
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        &:hover {
+                            color: var(--PrimaryColor);
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-top: 1rem;
+                    a {
+                        font-weight: 600;
+                        color: var(--whiteColor);
                     }
                 }
             }
 
-            .btn {
-                margin-top: 1rem;
-                a {
-                    font-weight: 600;
-                    color: var(--whiteColor);
-                }
+            .closeNavbar {
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
             }
         }
 
-        .closeNavbar {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
+        .activeNavbar {
+            top: 7rem;
         }
     }
 

@@ -30,43 +30,46 @@
     height: max-content;
     width: 80%;
     border-radius: 1rem;
-    top: 6rem;
+    top: -30rem;
     left: 50%;
     padding: 1rem;
     transform: translateX(-50%);
     z-index: 2000;
     box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
-  .header .navList {
+  .header .navBar .navList {
     flex-direction: column;
     justify-content: center;
     width: 100%;
     margin: auto;
     padding: 0.5rem 0;
   }
-  .header .navList .navItem {
+  .header .navBar .navList .navItem {
     padding: 0.5rem 0;
   }
-  .header .navList .navItem .navLink {
+  .header .navBar .navList .navItem .navLink {
     color: var(--textColor);
     font-size: 0.9rem;
     font-weight: 600;
   }
-  .header .navList .navItem .navLink:hover {
+  .header .navBar .navList .navItem .navLink:hover {
     color: var(--PrimaryColor);
   }
-  .header .navList .btn {
+  .header .navBar .navList .btn {
     margin-top: 1rem;
   }
-  .header .navList .btn a {
+  .header .navBar .navList .btn a {
     font-weight: 600;
     color: var(--whiteColor);
   }
-  .header .closeNavbar {
+  .header .navBar .closeNavbar {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
+  }
+  .header .activeNavbar {
+    top: 7rem;
   }
 }
 .header .toggleNavbar .icon {
