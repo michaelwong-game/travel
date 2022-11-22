@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
 
                 <div className={active}>
-                    <ui className="navList flex">
+                    <ul className="navList flex">
                         <li className="navItem">
                             <a href="#" className="navLink">
                                 Home
@@ -69,7 +69,7 @@ const Navbar = () => {
                         <button className="btn">
                             <a href="#">BOOK NOW</a>
                         </button>
-                    </ui>
+                    </ul>
 
                     <div onClick={removeNavbar} className="closeNavbar">
                         <AiFillCloseCircle className="icon" />
