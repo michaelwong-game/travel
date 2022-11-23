@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Main.css";
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { HiOutlineClipboardCheck } from "react-icons/hi";
+
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 import img1 from "../../Assets/img1.jpg";
 import img2 from "../../Assets/img2.jpg";
@@ -108,10 +111,15 @@ const data = [
 ];
 
 const Main = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
         <section className="main container seciton">
             <div className="setTitle">
-                <h3 className="title">Most visited destinations</h3>
+                <h3 className="title" data-aos="fade-right">Most visited destinations</h3>
             </div>
 
             <div className="setContent grid">
@@ -126,7 +134,7 @@ const Main = () => {
                         description,
                     }) => {
                         return (
-                            <div id={id} className="singleDestination">
+                            <div id={id} className="singleDestination"  data-aos="fade-up">
                                 <div className="imageDiv">
                                     <img src={imgsrc} alt={destTitle} />
                                 </div>

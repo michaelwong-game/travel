@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { GoLocation } from "react-icons/go";
 import { HiFilter } from "react-icons/hi";
@@ -10,18 +10,25 @@ import { TbApps } from "react-icons/tb";
 
 import video from "../../Assets/giphy480p.mp4";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Home = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
         <section className="home">
             <div className="overlay"></div>
             <video autoPlay muted loop type="video/mp4" src={video} />
             <div className="homeContent container">
                 <div className="textDiv">
-                    <span className="smallText">Our Packages</span>
-                    <h1 className="homeTitle">Search your Holiday</h1>
+                    <span className="smallText" data-aos="fade-up">Our Packages</span>
+                    <h1 className="homeTitle"  data-aos="fade-up">Search your Holiday</h1>
                 </div>
 
-                <div className="cardDiv grid">
+                <div className="cardDiv grid" data-aos="fade-up">
                     <div className="destinationInput">
                         <label htmlFor="city">Search your destination: </label>
                         <div className="input flex">
@@ -46,7 +53,12 @@ const Home = () => {
                             <h3 className="total">$5000</h3>
                         </div>
                         <div className="input flex">
-                            <input type="range" value="2000" max="5000" min="1000" />
+                            <input
+                                type="range"
+                                value="2000"
+                                max="5000"
+                                min="1000"
+                            />
                         </div>
                     </div>
 
@@ -56,7 +68,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="homeFooterIcons flex">
+                <div className="homeFooterIcons flex" data-aos="fade-up">
                     <div className="rightIcons">
                         <FiFacebook className="icon" />
                         <AiOutlineInstagram className="icon" />
