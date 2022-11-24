@@ -117,7 +117,7 @@ const Main = () => {
     }, []);
 
     return (
-        <section className="main container seciton">
+        <section className="main container section">
             <div className="setTitle">
                 <h3 className="title" data-aos="fade-right">Most visited destinations</h3>
             </div>

@@ -42,7 +42,7 @@ li {
     padding: 4rem 0 2rem;
 }
 
-.container { 
+.container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -63,7 +63,7 @@ li {
 }
 
 .btn {
-    padding: .6rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     background: var(--gradientColor);
     border-radius: 3rem;
     outline: none;
@@ -79,7 +79,8 @@ li {
     background: var(--SecondaryColor);
 }
 
-img, video {
+img,
+video {
     width: 100%;
     height: auto;
 }
@@ -88,5 +89,19 @@ body {
     background: var(--bodyColor);
 }
 
+@media screen and (min-width: 1240px) {
+    .container {
+        width: 80% !important;
+        margin: auto !important;
+    }
 
+    .section {
+        padding: 6rem 0 4rem;
+    }
+}
 
+@media screen and (min-width: 1500px) {
+    body {
+        zoom: 1.3;
+    }
+}
